@@ -277,6 +277,7 @@ macro_rules! RIDL {
     );
     (@item $thing:item) => ($thing);
 }
+#[macro_export]
 macro_rules! UNION {
     ($(#[$attrs:meta])* union $name:ident {
         [$stype:ty; $ssize:expr],
@@ -335,6 +336,7 @@ macro_rules! UNION {
         )+}
     );
 }
+#[macro_export]
 macro_rules! BITFIELD {
     ($base:ident $field:ident: $fieldtype:ty [
         $($thing:ident $set_thing:ident[$r:expr],)+
